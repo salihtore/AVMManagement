@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08BD1A3C-2A3F-4209-AEED-8EED929CEC96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AVM.UI</RootNamespace>
+    <AssemblyName>AVM.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v25.1.Core, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v25.1.Core, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v25.1.UI, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v25.1.Wizard, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v25.1, Version=25.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiraciDuzenleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiraciDuzenleForm.Designer.cs">
+      <DependentUpon>KiraciDuzenleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiraciEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiraciEkleForm.Designer.cs">
+      <DependentUpon>KiraciEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagazaDuzenleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagazaDuzenleForm.Designer.cs">
+      <DependentUpon>MagazaDuzenleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagazaEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagazaEkleForm.Designer.cs">
+      <DependentUpon>MagazaEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TenantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TenantForm.Designer.cs">
+      <DependentUpon>TenantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAnaSayfa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAnaSayfa.Designer.cs">
+      <DependentUpon>UCAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCKiracilar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCKiracilar.Designer.cs">
+      <DependentUpon>UCKiracilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreRentHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreRentHistoryForm.Designer.cs">
+      <DependentUpon>StoreRentHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMagazalar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMagazalar.Designer.cs">
+      <DependentUpon>UCMagazalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRentManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRentManagement.Designer.cs">
+      <DependentUpon>UCRentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelEditForm.Designer.cs">
+      <DependentUpon>PersonnelEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelForm.Designer.cs">
+      <DependentUpon>PersonnelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPersonnel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPersonnel.Designer.cs">
+      <DependentUpon>UCPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAnnouncements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAnnouncements.Designer.cs">
+      <DependentUpon>UCAnnouncements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonnelInboxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonnelInboxForm.Designer.cs">
+      <DependentUpon>PersonnelInboxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseForm.Designer.cs">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCExpenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCExpenses.Designer.cs">
+      <DependentUpon>UCExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTurnover.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCServiceRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStorePersonnel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTenantDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCShifts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTasks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLeaveRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCManageLeaveRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdminServiceRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdminLeaveRequests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPersonnelDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiraciDuzenleForm.resx">
+      <DependentUpon>KiraciDuzenleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiraciEkleForm.resx">
+      <DependentUpon>KiraciEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazaDuzenleForm.resx">
+      <DependentUpon>MagazaDuzenleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazaEkleForm.resx">
+      <DependentUpon>MagazaEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UCAnaSayfa.resx">
+      <DependentUpon>UCAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCKiracilar.resx">
+      <DependentUpon>UCKiracilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreRentHistoryForm.resx">
+      <DependentUpon>StoreRentHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMagazalar.resx">
+      <DependentUpon>UCMagazalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRentManagement.resx">
+      <DependentUpon>UCRentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelEditForm.resx">
+      <DependentUpon>PersonnelEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelForm.resx">
+      <DependentUpon>PersonnelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPersonnel.resx">
+      <DependentUpon>UCPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAnnouncements.resx">
+      <DependentUpon>UCAnnouncements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonnelInboxForm.resx">
+      <DependentUpon>PersonnelInboxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseForm.resx">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCExpenses.resx">
+      <DependentUpon>UCExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVM.Business\AVM.Business.csproj">
+      <Project>{87dd690e-5bcc-46f5-bfbc-510c0fc1a57c}</Project>
+      <Name>AVM.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVM.Core\AVM.Core.csproj">
+      <Project>{a87d649b-3995-4b33-be35-aec80e0557d5}</Project>
+      <Name>AVM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVM.DataAccess\AVM.DataAccess.csproj">
+      <Project>{71686ba1-5e99-4101-8035-ff77d7180e33}</Project>
+      <Name>AVM.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
