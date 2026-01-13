@@ -1,8 +1,5 @@
 # AVM Yönetim Sistemi - Proje Sunum Raporu
 
-**Tarih:** 09.01.2026
-**Durum:** Tamamlandı / Yayına Hazır
-
 ---
 
 ## 1. Proje Özeti
